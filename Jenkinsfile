@@ -25,7 +25,7 @@ pipeline{
             }
             steps{
                 sh './jenkins/scripts/deliver-for-development.sh'
-                input message: 'Finishing using the web site? (click "Process" to cointinue )'
+                input message: 'Finishing using the web site? (click "Process" to continue )'
                 sh './jenkins/scripts/kill.sh'
             }
         }
@@ -35,7 +35,7 @@ pipeline{
             }
             steps{
                 sh './jenkins/scripts/deploy-for-production.sh'
-                input message: 'Finishing using the web site? (click "Process" to cointinue )'
+                input message: 'Finishing using the web site? (click "Process" to continue )'
                 sh './jenkins/scripts/kill.sh'
             }
         }
